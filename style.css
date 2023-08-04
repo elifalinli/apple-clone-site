@@ -18,7 +18,14 @@ a {
     display: block;
     text-decoration: none;
 }
-
+.body{
+    font-size: 17px;
+    line-height: 1.47059;
+    font-weight: 400;
+    font-family: "SF Pro Text", "SF Pro Icons", "Helvetica Neue", Helvetica, Arial, sans-serif;
+    font-style: normal;
+    min-width: 320px;
+}
 .container {
     max-width: 98rem;
     margin: 0 auto;
@@ -154,18 +161,23 @@ header {
 }
 .title-dark{
     font-size: 32px;
-    line-height: 1.08349;
+    line-height: 1.125;
     letter-spacing: -.002em;
+    margin-top: var(--global-nav-collective-height);
     color: #1d1d1f;
 }
 .title-heading{
-    margin-block-start: 0.83em;
-    margin-block-end: 0.83em;
-    font-weight: 500;
+    margin-block-start: 1.2em;
+    margin-block-end: 0.4em;
+    font-weight: 400;
+    font-size: 32px;
     margin-bottom: 0px;
+    padding: 0;
+    margin-inline-start: 0px;
+    margin-inline-end: 0px;
 }
 .title-sub-heading{
-    font-size: 24px;
+    font-size: 19px;
     width: 100%;
     line-height: 1.16667;
     font-weight: 400;
@@ -189,15 +201,150 @@ header {
 .grid-container{
     display: grid;
     grid-gap: var(--gutter-width);
-    grid-template-columns: repeat(var(--columns), 1fr);
+    grid-template-columns: repeat(var(--columns), 1fr); 
     --content-height: 490px;
     --columns: 2;
+    --gutter-width: 6px;
+    --gutter-half-width: 3px;
+    --gutter-and-half-width: 9px;
+    --gutter-color: #fff;
+    --double-edge-border-width: 0px;
+    --edge-border-width: 0px;
+    --edge-border-width-fallback: 0px;
 
 }
+@media (max-width: 734px) {
+    .grid-container {
+        grid-template-columns: repeat(1, 1fr);
+    }
+}
+
 .hero{
     height: 69.2rem;
     background-size: auto 73.6rem;
     background-position: center;
     background-repeat: no-repeat;
-    border-bottom: 0.6rem solid #ffffff ;
+    border-bottom: 0.5rem solid #ffffff ;
+}
+
+.iphone-14{
+    background: url("assets/iphones.png") no-repeat center; 
+    background-size: auto 55rem;
+}
+.watch{
+    background: url("assets/apple-watch.png") no-repeat center;
+    background-size: auto 55rem;
+}
+.title-heading-watch{
+    height: 42px;
+    background: url("assets/watch-series-8.png") center no-repeat;
+    background-size: 109px 42px;
+    margin-bottom: 0px;
+    padding: 0;
+    margin-block-start: 1.33em;
+    margin-inline-start: 0px;
+    margin-inline-end: 0px;
+}
+.title-sub-heading-watch{
+    font-size: 19px;
+    width: 100%;
+    line-height: 1.16667;
+    font-weight: 400;
+    letter-spacing: .009em;
+    margin-block-start: 1.67em;
+    margin-block-end: 1.67em;
+    margin-inline-start: 0px;
+    margin-inline-end: 0px;
+    position: relative;
+    color: #f5f5f7;
+}
+.trade-in{
+    background: url("assets/trade-in-image.png") center no-repeat;
+    background-size: auto 55rem;
+}
+.title-heading-tradein{
+    background: url("assets/tradein-logo.png") no-repeat center;
+    background-size: 127px 27px;
+    height: 27px;
+    margin-bottom: 0px;
+    padding: 0;
+    margin-block-start: 1.33em;
+    margin-inline-start: 0px;
+    margin-inline-end: 0px;
+}
+
+.ipad-pro{
+    background: url("assets/ipads.png") center no-repeat;
+    background-size: auto 55rem;
+}
+.title-heading-ipad{
+    height: 27px;
+    font-size: 32px;
+    margin-block-start: 1.33em;
+    font-weight: 400;
+    margin-bottom: 0px;
+    padding: 0;
+    margin-inline-start: 0px;
+    margin-inline-end: 0px;
+    color: #f5f5f7;
+}
+.title-sub-heading-ipad{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 19px;
+    width: 100%;
+    line-height: 1.16667;
+    font-weight: 400;
+    letter-spacing: .009em;
+    margin-inline-start: 0px;
+    margin-inline-end: 0px;
+    position: relative;
+    color: #f5f5f7;
+}
+
+.title-sub-heading-ipad .m2-logo{    
+    display: inline-block;
+    background-image: url("assets/m2-logo.png");
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: 35px 35px;
+    margin-left: 4px;
+    width: 35px;
+    height: 35px;
+}
+
+.apple-news{
+    background: url("assets/news-bg.jpeg") center no-repeat;
+    width: auto;
+    height: 55rem;
+    background-size: 530px 490px;
+}
+.title-heading-news{
+    background: url("assets/news-logo.png") no-repeat center;
+    background-size: 99px 31px;
+    height: 31px;
+    margin-bottom: 4px;
+    padding: 0px;
+    margin-top: 0px;
+    margin-inline-start: 0px;
+    margin-inline-end: 0px;
+}
+
+.apple-fitness{
+    background: url("assets/apple-fitness.png") center no-repeat;
+    width: auto;
+    height: 55rem;
+    background-size: 530px 490px;
+}
+.title-heading-fitness{
+    background: url("assets/fitness-logo.png") no-repeat center;
+    background-size: 142px 26px;
+    height: 26px;
+    margin-bottom: 4px;
+    padding: 0px;
+    margin: 0 auto;
+    margin-inline-start: 0px;
+    margin-inline-end: 0px;
+
 }
