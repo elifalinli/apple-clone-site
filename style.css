@@ -1,6 +1,5 @@
 *,
-*::before 
-*::after {
+*::before *::after {
     margin: 0;
     padding: 0;
 }
@@ -18,7 +17,8 @@ a {
     display: block;
     text-decoration: none;
 }
-.body{
+
+.body {
     font-size: 17px;
     line-height: 1.47059;
     font-weight: 400;
@@ -26,6 +26,7 @@ a {
     font-style: normal;
     min-width: 320px;
 }
+
 .container {
     max-width: 98rem;
     margin: 0 auto;
@@ -43,7 +44,7 @@ header {
     backdrop-filter: blu(2rem);
 }
 
-.nav-list { 
+.nav-list {
     display: flex;
     width: 100%;
     list-style: none;
@@ -89,13 +90,15 @@ header {
     height: 44px;
     background-size: contain;
 }
-.nav-link-search{
+
+.nav-link-search {
     width: 1.6rem;
     height: 44px;
     background: url("assets/search.png") center no-repeat;
     background-size: contain;
 }
-.nav-link-bag{
+
+.nav-link-bag {
     width: 1.6rem;
     height: 44px;
     margin-right: 1rem;
@@ -103,34 +106,38 @@ header {
     background-size: contain;
 }
 
-.iphone-14-pro{
-    background:url("assets/iphones-first-section.png") ;
+.iphone-14-pro {
+    background: url("assets/iphone14-larger-image.jpeg");
     background-size: contain;
     margin-top: 4.4rem;
     margin: auto;
     border-top: none;
 }
-.title{
-    color: rgb(245,245, 247);
+
+.title {
+    color: rgb(245, 245, 247);
     text-align: center;
     padding-top: 5.5rem;
 }
-.title-heading-iphone14{
+
+.title-heading-iphone14 {
     font-size: 36px;
     line-height: 1.125;
     font-weight: 500;
     letter-spacing: .004em;
     margin-bottom: 0px;
-    
+
 }
-.title-sub-heading-iphone14{
+
+.title-sub-heading-iphone14 {
     font-size: 19px;
     line-height: 1.11053;
     font-weight: 400;
     letter-spacing: 0em;
     padding-top: 0px;
 }
-.cta{
+
+.cta {
     font-size: 17px;
     line-height: 1.23536;
     font-weight: 400;
@@ -141,32 +148,37 @@ header {
     margin-top: 0.7em;
     text-align: center;
 }
-.cta-link{
+
+.cta-link {
     color: #2997ff;
-   margin-left: -1px;
-   pointer-events: all;
-   display: inline-block;
+    margin-left: -1px;
+    pointer-events: all;
+    display: inline-block;
 }
-.cta-link:nth-child(2){
+
+.cta-link:nth-child(2) {
     margin-left: 2.6rem;
 }
-.cta-link:hover{
+
+.cta-link:hover {
     border-bottom: 2px solid #2997ff;
 }
 
-.gift-card-campaign{
+.gift-card-campaign {
     background: url("assets/gift-card\ section.png");
-    
+
 
 }
-.title-dark{
+
+.title-dark {
     font-size: 32px;
     line-height: 1.125;
     letter-spacing: -.002em;
     margin-top: var(--global-nav-collective-height);
     color: #1d1d1f;
 }
-.title-heading{
+
+.title-heading {
     margin-block-start: 1.2em;
     margin-block-end: 0.4em;
     font-weight: 400;
@@ -176,7 +188,8 @@ header {
     margin-inline-start: 0px;
     margin-inline-end: 0px;
 }
-.title-sub-heading{
+
+.title-sub-heading {
     font-size: 19px;
     width: 100%;
     line-height: 1.16667;
@@ -185,23 +198,26 @@ header {
     margin-left: auto;
     margin-right: auto;
     position: relative;
-    
+
 }
-.cta-link-darker{
+
+.cta-link-darker {
     color: #2997ff;
 }
-.cta-link-darker:hover{
+
+.cta-link-darker:hover {
     border-bottom: 2px solid #2997ff;
 }
 
-.macbook-air-15{
+.macbook-air-15 {
     background: url("assets/macbook.png");
 
 }
-.grid-container{
+
+.grid-container {
     display: grid;
     grid-gap: var(--gutter-width);
-    grid-template-columns: repeat(var(--columns), 1fr); 
+    grid-template-columns: repeat(var(--columns), 1fr);
     --content-height: 490px;
     --columns: 2;
     --gutter-width: 6px;
@@ -213,29 +229,163 @@ header {
     --edge-border-width-fallback: 0px;
 
 }
+
 @media (max-width: 734px) {
     .grid-container {
         grid-template-columns: repeat(1, 1fr);
     }
 }
 
-.hero{
+@media screen and (max-width : 800px) {
+    header {
+        height: 4.8rem;
+        transition: background 0.36s cubic-bezier(0.32, 0.08, 0.24, 1),
+            height 0.56s cubic-bezier(0.32, 0.08, 0.24, 1)
+    }
+
+    header .container {
+        padding: 0;
+    }
+
+    .iphone-14-pro {
+        background: url("assets/iphones-first-section.png");
+        margin-top: 4.8rem;
+    }
+
+   
+    .nav-list {
+        margin-top: 0;
+    }
+
+    .nav-list-mobile {
+        display: flex;
+    }
+
+    .nav-item {
+        width: 4.8rem;
+        height: 4.8rem;
+        display: flex;
+        flex-direction:column;
+        justify-content: center;
+
+    }
+
+    .nav-items-hidden {
+        display: none;
+    }
+
+    .mobile-menu {
+        position: relative;
+        z-index: 1500;
+        width: 100%;
+        height: 100%;
+        display: flex;
+        text-align: left;
+        align-items: center;
+        justify-content: center;
+        cursor: pointer;
+    }
+
+    .line{
+        position: absolute;
+        width: 1.7rem;
+        height: 1px;
+        background-color: #000;
+        transition: margin-top 0.3192s cubic-bezier(0.04, 0.04, 0.12, 0.96);
+
+    }
+    .line-top{
+        margin-top: 3px;
+    }
+    .line-bottom{
+        margin-top: -0.4rem;
+    }
+    .active .line-top{
+        margin-top: 0;
+        transform: rotate(45deg);
+        transition: transform cubic-bezier(0.04, 0.04, 0.12, 0.96);;
+
+    }
+    .active .line-bottom{
+        margin-top: 0;
+        transform: rotate(-45deg);
+        transition: transform cubic-bezier(0.04, 0.04, 0.12, 0.96);;
+
+    }
+    header.active{
+        height: 100%;
+        background-color: rgb(251, 251, 253)
+    }
+    .nav-link-apple{
+        width: 2.8rem;
+        height: 4.8rem;
+        position: absolute;
+        z-index: 1500;
+
+    }
+   
+    .nav{
+        position: relative;
+    }
+    .nav-link{
+        font-size: 1.7rem;
+        padding: 0;
+        margin: auto 0;
+    }
+    .nav-list-larger{
+        position: fixed;
+        top: 0;
+        left: 0;
+        width: auto;
+        height: auto;
+        display: block;
+        font-size: 28px;
+        padding: 10.5rem 5rem;
+        z-index: 1000;
+        box-sizing: border-box;
+        transition: opacity 0.3s;
+    }
+    .active .nav-list-larger{
+        width: 100%;
+        height: 100vh;
+        opacity: 1;
+        visibility: visible;
+    }
+    .active .nav-link-bag{
+        opacity: 0;
+        transition: opacity 0.3s;
+        background-color: rgb(251, 251, 253);
+    }
+    .active .nav-link-search{
+        opacity: 0;
+        transition: opacity 0.3s;
+        background-color: rgb(251, 251, 253);
+    }
+    .nav-list-larger .nav-item{
+        justify-content: flex-start
+
+    }
+}
+
+.hero {
     height: 69.2rem;
     background-size: auto 73.6rem;
     background-position: center;
     background-repeat: no-repeat;
-    border-bottom: 0.5rem solid #ffffff ;
+    border-bottom: 0.5rem solid #ffffff;
 }
 
-.iphone-14{
-    background: url("assets/iphones.png") no-repeat center; 
+.iphone-14 {
+    background: url("assets/iphones.png") no-repeat center;
     background-size: auto 55rem;
 }
-.watch{
+
+.watch {
     background: url("assets/apple-watch.png") no-repeat center;
     background-size: auto 55rem;
 }
-.title-heading-watch{
+
+.title-heading-watch {
     height: 42px;
     background: url("assets/watch-series-8.png") center no-repeat;
     background-size: 109px 42px;
@@ -245,7 +395,8 @@ header {
     margin-inline-start: 0px;
     margin-inline-end: 0px;
 }
-.title-sub-heading-watch{
+
+.title-sub-heading-watch {
     font-size: 19px;
     width: 100%;
     line-height: 1.16667;
@@ -258,11 +409,13 @@ header {
     position: relative;
     color: #f5f5f7;
 }
-.trade-in{
+
+.trade-in {
     background: url("assets/trade-in-image.png") center no-repeat;
     background-size: auto 55rem;
 }
-.title-heading-tradein{
+
+.title-heading-tradein {
     background: url("assets/tradein-logo.png") no-repeat center;
     background-size: 127px 27px;
     height: 27px;
@@ -273,11 +426,12 @@ header {
     margin-inline-end: 0px;
 }
 
-.ipad-pro{
+.ipad-pro {
     background: url("assets/ipads.png") center no-repeat;
     background-size: auto 55rem;
 }
-.title-heading-ipad{
+
+.title-heading-ipad {
     height: 27px;
     font-size: 32px;
     margin-block-start: 1.33em;
@@ -288,7 +442,8 @@ header {
     margin-inline-end: 0px;
     color: #f5f5f7;
 }
-.title-sub-heading-ipad{
+
+.title-sub-heading-ipad {
     display: flex;
     justify-content: center;
     align-items: center;
@@ -303,7 +458,7 @@ header {
     color: #f5f5f7;
 }
 
-.title-sub-heading-ipad .m2-logo{    
+.title-sub-heading-ipad .m2-logo {
     display: inline-block;
     background-image: url("assets/m2-logo.png");
     background-repeat: no-repeat;
@@ -314,13 +469,14 @@ header {
     height: 35px;
 }
 
-.apple-news{
+.apple-news {
     background: url("assets/news-bg.jpeg") center no-repeat;
     width: auto;
     height: 55rem;
     background-size: 530px 490px;
 }
-.title-heading-news{
+
+.title-heading-news {
     background: url("assets/news-logo.png") no-repeat center;
     background-size: 99px 31px;
     height: 31px;
@@ -331,13 +487,14 @@ header {
     margin-inline-end: 0px;
 }
 
-.apple-fitness{
+.apple-fitness {
     background: url("assets/apple-fitness.png") center no-repeat;
     width: auto;
     height: 55rem;
     background-size: 530px 490px;
 }
-.title-heading-fitness{
+
+.title-heading-fitness {
     background: url("assets/fitness-logo.png") no-repeat center;
     background-size: 142px 26px;
     height: 26px;
@@ -347,4 +504,84 @@ header {
     margin-inline-start: 0px;
     margin-inline-end: 0px;
 
+}
+
+.footer {
+    width: 100%;
+    height: auto;
+    background: var(--footer-background) center;
+    overflow: hidden;
+}
+
+#ac-globalfooter {
+    text-size-adjust: 100%;
+    font-synthesis: none;
+    direction: ltr;
+    -webkit-font-smoothing: antialiased;
+    --footer-background: #f5f5f7;
+    --footer-border-color: #d2d2d7;
+    --footer-text-color: #6e6e73;
+    --footer-link-color: #424245;
+    --footer-pipe-color: #86868b;
+    --footer-directory-title-color: #1d1d1f;
+    --footer-directory-title-color-hover: #000;
+    color: var(--footer-text-color);
+
+}
+
+#ac-globalfooter * {
+    box-sizing: content-box;
+    margin: 0;
+    pointer-events: auto;
+    letter-spacing: -.01em;
+    font-size: 1em;
+    font-family: inherit;
+    font-weight: 400;
+    line-height: 1.33337;
+    text-align: left;
+}
+
+
+
+#ac-globalfooter .footer-ol-items {
+    border-bottom: 1px solid var(--footer-border-color);
+    padding: 17px 0 11px;
+    font-size: 12px;
+}
+
+#ac-globalfooter .footer-ol-items ol li {
+    font-size: 12px;
+    line-height: 1.33337;
+    font-weight: 400;
+    letter-spacing: -.01em;
+    padding-bottom: 0.8em;
+    list-style: decimal;
+}
+
+#ac-globalfooter .footer-ol-items li {
+    list-style: none;
+
+}
+
+
+#ac-globalfooter .ac-gf-footer-locale {
+
+    margin-top: 5px;
+    margin-bottom: 5px;
+    position: relative;
+    top: -3px;
+    z-index: 2;
+    white-space: nowrap;
+}
+
+
+#ac-globalfooter .ac-gf-footer-shop {
+    font-size: 1em;
+    margin-top: 7px;
+    padding-top: 8px;
+    margin-bottom: 7px;
+    padding-bottom: 8px;
+    border-bottom: none;
+    --footer-mini-shop-link-color: #06c;
+    max-height: 9999px;
 }

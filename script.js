@@ -1,7 +1,7 @@
 
 /* that is
-if to add a mobile menu section
-does not do anything yet */
+to add a mobile menu section
+*/
  
 const selectElement = (element) => document.querySelector(element);
 selectElement('.mobile-menu').addEventListener('click', () => {
